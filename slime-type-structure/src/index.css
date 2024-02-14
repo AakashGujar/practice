@@ -1,0 +1,166 @@
+@font-face {
+  font-family: neu;
+  src: url(./assets/NeueHaasDisplayMediu.ttf);
+}
+
+@font-face {
+  font-family: neu-light;
+  font-weight: 100;
+  src: url(./assets/NeueHaasDisplayLight.ttf);
+}
+
+@font-face {
+  font-family: neu;
+  font-weight: 200;
+  src: url(./assets/NeueHaasDisplayRoman.ttf);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans";
+}
+
+body{
+  height: 100vh;
+  width: 100%;
+  font-family: neu;
+  background-color: #EFEAE3;
+}
+
+main{
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.slime1{
+  width: 20rem;
+  height: 20rem;
+  background: linear-gradient(#FE320A, #fe3f0a);
+  position: absolute;
+  bottom: -80px; 
+  right: -15px;
+  border-radius: 50%;
+  filter: blur(25px);
+  animation-name: anime2;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.slime2{
+  width: 20rem;
+  height: 10rem;
+  background-color: #FE320A;
+  position: absolute;
+  bottom: 0; 
+  right: 0;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  filter: blur(25px);
+  animation-name: anime1;
+
+}
+
+.slime3{
+  width: 20rem;
+  height: 10rem;
+  background: linear-gradient(#FE320A, #fe3f0a);
+  position: absolute;
+  bottom: 0; 
+  right: 0;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  filter: blur(25px);
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  right:0;
+  bottom:0;
+  animation-name: anime1;
+
+}
+
+
+@keyframes anime1 {
+  from {
+      transform: translate(55%, -3%);
+  }
+
+  to {
+      transform: translate(0%, 10%);
+  }
+}
+
+@keyframes anime2 {
+  from {
+      transform: translate(5%, -5%);
+  }
+
+  to {
+      transform: translate(-20%, 30%);
+  }
+} 
+
+#gooey {
+  height: 32vw;
+  width: 32vw;
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(to top right, #ff2d03, #ff5c0b);
+  /* background: linear-gradient(to top right,red,blue); */
+  top: 5%;
+  left: 5%;
+  filter: blur(20px);
+  animation-name: gooey;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+
+}
+
+@keyframes gooey {
+  from {
+      filter: blur(20px);
+      transform: translate(10%, -10%) skew(0);
+  }
+
+  to {
+      filter: blur(30px);
+      transform: translate(-10%, 10%) skew(-12deg);
+  }
+}
+
+#center {
+  padding-inline: 5rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid #0000003c;
+  padding-bottom: 2.5vw;
+}
+
+#left h3 {
+  width: 25vw;
+  font-size: 1.8vw;
+  line-height: 2vw;
+  font-family: 'neu';
+}
+
+#center h1 {
+  font-size: 10vw;
+  text-align: right;
+  line-height: 8vw;
+  font-family: 'neu-light';
+  text-transform: uppercase;
+  padding-bottom: 10vh;
+}
